@@ -2,7 +2,7 @@
 def prime?(int)
   if int <= 1 
     return false 
-  elsif (2..int).each { |n| int % n == 0 && n < int }
+  elsif (2..int).any? { |n| int % n == 0 }
     return false 
   else 
     return true 
